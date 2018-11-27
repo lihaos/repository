@@ -1,0 +1,19 @@
+git init
+git add
+git add .
+git commit filename
+git commit -m 'first commit filename'
+git commit -m 'commit all files'
+git commit -am 'commit filename version'
+git config --list
+git log
+git log oneline
+
+
+撤销操作
+git commit --amend 撤销上一次操作
+git checkout --. 撤销所有文件
+git reset HEAD 暂存区撤回到工作区
+
+git rm -f filename 工作区删除 删干净
+git rm --cached filename 暂存区删除
