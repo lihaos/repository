@@ -17,3 +17,47 @@ git reset HEAD 暂存区撤回到工作区
 
 git rm -f filename 工作区删除 删干净
 git rm --cached filename 暂存区删除
+
+git branch
+git branch master2.0
+git branch -D master2.0
+git branch -m 原分支名 新分支名
+
+git diff 暂存区和工作区
+git diff --staged 版本库和暂存区的区别
+
+
+
+
+基本命令 
+git init :初始化仓库 
+git add /<filename/> :添加未跟踪文件到暂存区 或 添加修改的文件到暂存区 
+git rm /<filename/> :将文件从git跟踪列表中删除 
+git commit -m 'commit log' :提交一个版本到git 
+git log :查看所有的提交历史记录 
+git status :查看当前git的状态 
+git checkout -- /<file/> :撤销工作目录文件的修改 
+git reset HEAD /<file/> :取消暂存 
+版本管理 
+git reset --hard HEAD^ :版本回退上一个版本 
+git reset --hard HEAD^^ :版本回退上上个版本 
+git reset --hard HEAD~100 :版本回退前一百个版本 
+git reflog :查看操作记录,可以找到所有历史commit 
+git diff HEAD -- /<file/> :命令可以查看工作区和版本库里面最新版本的区别 
+远程管理 
+git clone aliyunzixun@xxx.comgithub.com:michaelliao/gitskills.git :将远程库下载下来 
+git remote add origin aliyunzixun@xxx.com:path/repo-name.git :添加远程库地址 
+git push -u origin master :提交的远程库 
+git remote -v:查看远程库信息 
+git push origin branch-name:从本地推送分支,如果推送失败,先用git pull抓取远程的新提交 
+git checkout -b branch-name origin/branch-name:在本地创建和远程分支对应的分支,本地和远程分支的名称最好一致 
+git branch --set-upstream branch-name origin/branch-name:建立本地分支和远程分支的关联 
+git pull:从远程抓取分支,如果有冲突,要先处理冲突 
+分支 
+git branch:查看分支 
+git branch /<name/>:创建分支 
+git checkout /<name/>:切换分支 
+git checkout -b /<name/>:创建并切换分支 
+git merge /<name/>:合并某分支到当前分支 
+git branch -d /<name/>:删除分支 
+git log --graph:命令可以看到分支合并图
